@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Setu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 14px;
+            margin: 0;
+            color: #f5f5f5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #006400;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #45a049;
+            font-weight: bold;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: 30px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: none; /* Hide all slides initially */
+            position: relative;
+        }
+
+        .slides.active {
+            display: block; /* Only show the active slide */
+        }
+
+        .slides img {
+            width: 100%;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .slideshow-container .prev, 
+        .slideshow-container .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+
+        .slideshow-container .prev {
+            left: 10px;
+        }
+
+        .slideshow-container .next {
+            right: 10px;
+        }
+
+        .slideshow-container .prev:hover, 
+        .slideshow-container .next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dots .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .dots .dot.active {
+            background-color: #28a745;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #006400;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 10px auto;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://imgs.search.brave.com/T1kcLfy-QzbEQJQRAZhkLehq7oXlaFgv6nhtgEkF7oM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3IvZnJ1aXQtdmVn/ZXRhYmxlLWxvZ28t/ZmxhdC1zdHlsZS12/ZWN0b3JfOTYxODc1/LTIzMzA2NS5qcGc_/c2l6ZT02MjYmZXh0/PWpwZw" alt="Kisan Setu Logo">
+            <h1>Kisan Setu</h1>
+            <p>Connecting Farmers to Markets</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Top seller</a>
+    </nav>
+
+    <section id="home">
+        <div class="slideshow-container">
+            <div class="slides active">
+                <img src="https://imgs.search.brave.com/AWcOEvuANlv3GiD1LKUgCWuIAiq-tZmmEgGrkU0NvCE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc0/NDI5MjQ4L3Bob3Rv/L2ZyZXNoLXZlZ2V0/YWJsZXMuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPWZ4bGdP/SUVUN2dLYThNM3J3/a1Y5NzRhVWZCMGdW/cFdpSlF3VW94QTRk/dFE9" alt="Fresh Vegetables">
+                <div class="slide-caption">Fresh Vegetables from Local Farms</div>
+            </div>
+            <div class="slides">
+                <img src="https://img.freepik.com/free-photo/farmers-are-working-green-oak-lettuce-farm_1150-7102.jpg?t=st=1732117536~exp=1732121136~hmac=e535450d1c0053b19ce088178d3b56a92997a73d9c514ea9c1a4e066ae95449b&w=1060" alt="Organic Farming">
+                <div class="slide-caption">Organic Farming for a Healthier Future</div>
+            </div>
+            <div class="slides">
+                <img src="https://imgs.search.brave.com/SZqYMLxTIDWPRaecaY8XuWZvtqHNF8UoDNtFGUx7TGQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTkz/NDYzNzUzMy9waG90/by9oaXNwYW5pYy1m/ZW1hbGUtY3VzdG9t/ZXItYnV5aW5nLXR3/by1nYXJsaWMtaGVh/ZHMtYW5kLWEtcGlu/ZWFwcGxlLWZyb20t/YS1tdWx0aWV0aG5p/Yy1mYXJtZXJzLndl/YnA_YT0xJmI9MSZz/PTYxMng2MTImdz0w/Jms9MjAmYz0yLWRX/S005Q1JER0hUdVMt/SU1NcTc5ck9tcHhM/WG1wU0xlUVhKeEw0/S3cwPQ" alt="Farmer's Market">
+                <div class="slide-caption">Bringing the Market to Your Doorstep</div>
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Kisan Setu</h2>
+        <p>
+            Kisan Setu is a platform designed to empower farmers by bridging the gap between them and the marketplace. 
+            Our mission is to provide a direct channel for farmers to sell their produce and ensure fair pricing.
+        <br>Join us and be a part of the change.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us at <a href="mailto:contact@kisansetu.com">contact@kisansetu.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Kisan Setu. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
+
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                dots[i].classList.remove("active");
+                if (i === index) {
+                    slide.classList.add("active");
+                    dots[i].classList.add("active");
+                }
+            });
+        };
+
+        const nextSlide = () => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        };
+
+        const prevSlide = () => {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        };
+
+        document.querySelector(".next").addEventListener("click", nextSlide);
+        document.querySelector(".prev").addEventListener("click", prevSlide);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                slideIndex = i;
+                showSlide(slideIndex);
+            });
+        });
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
